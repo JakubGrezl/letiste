@@ -16,10 +16,47 @@
     border-radius: 0px !important;
 }
 
+.card .btn {
+    position: absolute !important;
+    display: block;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px;
+    background-color: #418bc7; 
+}
+
+.welcome-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 505px;
+    background-color: #1f79b8;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.welcome-text {
+    max-width: 500px;
+}
+
+.welcome-text-button {
+    background-color: #114568;
+    border-radius: 0px;
+    color: white;
+}
+
+
 .card > h5 {
     text-transform: uppercase;
     font-weight: 900;
     color: #29497d;
+}
+
+.image-wrapper {
+    height: 150px;
 }
 
 .card-text {
@@ -27,12 +64,6 @@
     text-align: center;
 }
 
-.btn {
-    display: block;
-    position: relative;
-    bottom: 0px;
-
-}
 
 .navbar-content {
     text-decoration: none;
