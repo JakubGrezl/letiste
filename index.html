@@ -17,43 +17,81 @@
 
     <!-- ONLINE bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+   
+    
 
     <!-- css link -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="container">
-        <header class="header text-center">
+        <header class="header text-center shadow-style">
             <img src="img/logo.png" class="my-3" alt="logo-stránky">
             <nav class="navbar w-50 m-auto">
                 
             </nav>
-        </header>
+          </header>
 
-        <div id="mainCarousel" class="carousel slide">
-            <div class="carousel-inner">
-              
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
+          <div class="carousel-inner">
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
+        <div class="cards-wrapper row align-items-center justify-content-center w-100 m-0">
+          <div class="card m-auto w-25">
+            <h5 class="card-title text-center my-4">Card title</h5>
+            <div class="image-wrapper mx-auto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89px" height="111px"><image  x="0px" y="0px" width="89px" height="111px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABvCAMAAACw9pwtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX0pSX3///+Vf38PAAAAEHRSTlMAIEBwgMDgEFDwMJDQsKBg03b1OgAAAAFiS0dEAIgFHUgAAAAHdElNRQfnBRENAx9JLfN1AAAEZ0lEQVRo3u1a25KsIAxUIAhykf//2uXm6MxOIGCdOi/bT7s10iYhQJO4LB2sjAsAGS5IAMHZ2hvYwqYE6IBBg1DbDO1u7MkRbRSCnYh/A5w/WbOP0hb3pROI2ysTrj7jyeQbz0O0O3qxXA+XoyU5JSybSA9rr4h2KJ+fFz3uwgvHUOwO6HOzFAdgQ7x5XOKWjXFmjvfFbbBfffSJT/Em8BhHj1psp1K/YrMYtQzyCXGkjgyIzfoR8bJoJNIsBGoSL4MEGp9cEnCnPRImKiSWG8sRwuDO9YY9BGztbiHMp3NM6BDQ3IJgHzDbAFNv7aLp8YpHqo84S4393AY3zeyamfVkGbZXQ1xFc5tof6gOns3Bd9x1YR7tKToeMHfSSoRGvuOIZ5XoPBKZ0X0FRzznSMwBxuTgmnVan9kCRZhc2JIxzhKYIdutiWpN+WIvkJiX1Rcp2BF2+5GVV/DrQmWO3KYKZzBCMfYem5WxQ/iqdKXJryczJz8vAY3CmvNIHWFOk8Oiad9VvwbD764MMl/eMyUqeNokfmfOHDMF/4/58HKaWTp8S9pyMswyh4aU9ekyBXMKzDhv8b1MPzhfExx6rDzRBAnx2ECZZ4/XAvbH/Mc8wdzbr9oQKLN+yIwr2bg6n9SdVnx32B9dvNNOiSoJ8YA6ETeCGfdRO3cl3G1HD6YShxgP9koQmpwi/j6R5Vp3B07Ka/QAcEWBdWGGb7JALDJwdClhoN7X2WjJYCdvOKMlA7qTo3dkR56Y0TsyvUo0WKpSA/u6Hrq49e7Fs88u24gdbEQtjdW15MAylEO1uIM+KUP+LWkOqYaMmZyNplnChwWsDJpybq10504w2rUCJtSPodQ5fJgp//aOzEI8U+7cutR+VkQkasBHbjBOzNg1VmIrNzV1XCVmhOW9lw6aZS9/EYkgrsYMs6Ur16Df/VVxqEUqpb92jZLBuuzhK1yVCaRCxMojIBQ70hv89hr4ISZyMai8ejNZxDAl6ugv2Z0fOUssueWmSxzKa9Z33mpweaxGW+UK0a/8TqW0e/8wj5fHy65QG4a11pWfPOSHP1vqXX0s3S+pmaNTvKu1MKgN30J2+/3G7T4WwfFVy6lkk8s0qzgnVxZ7i09fDmL3tvnFHet7zme+Gsc4SQA1tXJdUX/Nx7i+bncSQI+yMvefkilPqkHW334LtWop5px2b26XliquasUlVzoHTl5jcDqV32Sbm/KLr38yXem1eYK8fxESzsi6cra3ldE1mnasl5QOtGtDFRVUqbXDPdxtFEFG16hKUCVq1sn0q8AA8oVEDN93KEgrRDzqNmKw/5i5+RHDFFiuG+Q2i31WtnzHkRlT2ue1S+2f9FBOaXlamrmDNHNfAb2wqfLhjrxHgFVBAGK6p1lPb+1/MahTbVjDx+gZP1sv6Ic7O3/JEglGsN4L0mdP14dbwNtTtXN/7/1IAH92USqO+L9//xTMek5MgDjaQaAAnDgmpoYxnj7ygs8GlkynePKjlUs/nRlRnG4OTHEAAAAASUVORK5CYII=" /></svg>
+            </div>
+              <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn mx-auto btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card m-auto w-25" >
+            <h5 class="card-title text-center my-4">Card title</h5>
+            <div class="image-wrapper mx-auto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="126px" height="104px"><image  x="0px" y="0px" width="126px" height="104px"  xlink:href="data:img/png;base64,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" /></svg>
+            </div>
+              <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn mx-auto btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card m-auto w-25" >
+            <h5 class="card-title text-center my-4">Card title</h5>
+             <div class="image-wrapper mx-auto"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="120px"> <image  x="0px" y="0px" width="120px" height="120px"  xlink:href="data:img/png;base64,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" /></svg>
+             </div>
+              <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn mx-auto btn-primary">Go somewhere</a>
+            </div>
+          </div> 
+        </div>
     </div>
 
+    
     <script src="script/navbar-content.js"></script>
     <script src="script/coursel-control.js"></script>
     <!-- <script>
-        $('.carousel').carousel()
+      $('.carousel').carousel()
     </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    
 </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
