@@ -48,7 +48,6 @@
     color: white;
 }
 
-
 .card > h5 {
     text-transform: uppercase;
     font-weight: 900;
@@ -98,4 +97,14 @@
     box-sizing: border-box;
 }
 
+.webactive {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    overflow: hidden;
+}
 
